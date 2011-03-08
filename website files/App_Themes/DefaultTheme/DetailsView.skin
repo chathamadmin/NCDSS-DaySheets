@@ -1,0 +1,29 @@
+<asp:DetailsView 
+    runat="server" 
+    AutoGenerateRows="False" 
+    CellPadding="2" 
+    ForeColor="Black" 
+    GridLines="None" 
+    Width="550px" 
+    BackColor="LightGoldenrodYellow" 
+    BorderColor="Tan" 
+    BorderWidth="1px" 
+    Font-Names="Verdana, Arial, Helvetica, sans-serif"
+    Font-Size="12px"
+    >
+    <HeaderStyle 
+        BackColor="Tan" 
+        Font-Bold="True" />
+    <FooterStyle 
+        BackColor="Tan" />
+    <EditRowStyle 
+        BackColor="#F9F8F0" 
+        ForeColor="Black" 
+        Font-Bold="True" />
+    <PagerStyle 
+        BackColor="PaleGoldenrod" 
+        ForeColor="DarkSlateBlue" 
+        HorizontalAlign="Center" />        
+    <AlternatingRowStyle 
+        BackColor="PaleGoldenrod" />
+</asp:DetailsView>    

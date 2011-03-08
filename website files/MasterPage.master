@@ -1,0 +1,50 @@
+<%-- This file is part of NCDSS Daysheets.
+
+    NCDSS Daysheets is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    NCDSS Daysheets is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with NCDSS Daysheets.  If not, see <http://www.gnu.org/licenses/>.
+--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>DSS Daysheets</title>
+    <link rel="stylesheet" href="DSSDaysheet.css" type="text/css" />
+</head>
+
+<body>
+<form runat="server"> 
+<div id="wrapper">
+<div id="header">
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Header.png" />
+</div>
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td valign="top" class="nav">
+        <%= BuildMenu() %>
+    </td>
+    <td valign="top" class="content">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </td>
+    </tr>
+</table>
+<div id="footer">
+    &copy;<% =DateTime.Now.Year %> <%= System.Configuration.ConfigurationManager.AppSettings["organizationName"]%>
+</div>
+</div>
+</form>
+</body>
+</html>

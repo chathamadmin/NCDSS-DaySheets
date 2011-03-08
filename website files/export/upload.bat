@@ -1,0 +1,1 @@
+ftp -s:commands.txt

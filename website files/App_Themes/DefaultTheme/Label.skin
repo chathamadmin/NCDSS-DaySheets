@@ -1,0 +1,5 @@
+<asp:Label 
+    runat="server" 
+    Font-Names="Verdana, Arial, Helvetica, sans-serif"
+    Font-Size="12px"
+    />

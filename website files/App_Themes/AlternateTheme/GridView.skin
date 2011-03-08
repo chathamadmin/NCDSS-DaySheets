@@ -1,0 +1,17 @@
+<asp:GridView 
+    runat="server" 
+    BackColor="WhiteSmoke"
+    BorderColor="Olive" 
+    BorderWidth="1px" 
+    CellPadding="4" 
+    ForeColor="Black" 
+    GridLines="None" 
+    AllowSorting="True"
+    ShowFooter="true"
+    Width="550px" 
+    >
+        <FooterStyle BackColor="LightGrey" />
+        <PagerStyle BackColor="Gainsboro" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+        <HeaderStyle BackColor="LightGrey" Font-Bold="True" HorizontalAlign="left" />
+        <AlternatingRowStyle BackColor="Gainsboro" />
+</asp:GridView>
