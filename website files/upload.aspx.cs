@@ -124,11 +124,11 @@ public partial class _default : System.Web.UI.Page
         try
         {
             StreamWriter commandStreamWriter = new StreamWriter(Server.MapPath("export/commands.txt"));
-            string openCommand = "open" + System.Configuration.ConfigurationManager.AppSettings["ftpUploadServer"];
+            string openCommand = "open " + System.Configuration.ConfigurationManager.AppSettings["ftpUploadServer"];
             commandStreamWriter.WriteLine(openCommand);
             commandStreamWriter.WriteLine(txtUsername.Text);
             commandStreamWriter.WriteLine(txtPassword.Text);
-            string putCommand = "put" + System.Configuration.ConfigurationManager.AppSettings["fileExportName"] + "'" + System.Configuration.ConfigurationManager.AppSettings["fileExportName"] + "'";
+            string putCommand = "put " + System.Configuration.ConfigurationManager.AppSettings["fileExportName"] + " '" + System.Configuration.ConfigurationManager.AppSettings["fileExportName"] + "'";
             commandStreamWriter.WriteLine(putCommand);
             commandStreamWriter.WriteLine("quit");
             commandStreamWriter.Close();

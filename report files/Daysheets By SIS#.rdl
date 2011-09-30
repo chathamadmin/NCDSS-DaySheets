@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
   <DataSources>
-    <DataSource Name="daysheetsDs">
-      <DataSourceReference>daysheetsDs</DataSourceReference>
-      <rd:DataSourceID>5cb0b890-2b9a-4daf-91c6-badfb7f64eb7</rd:DataSourceID>
-      <rd:SecurityType>None</rd:SecurityType>
+    <DataSource Name="DataSource1">
+      <rd:DataSourceID>82b4c798-a2f8-4b8c-b78f-e159afc5ec55</rd:DataSourceID>
+      <DataSourceReference>DataSource1</DataSourceReference>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -56,7 +55,7 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>daysheetsDs</DataSourceName>
+        <DataSourceName>DataSource1</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>spc_rpt_get_Daysheets_ByClientIDAndDateRange</CommandText>
         <QueryParameters>
@@ -104,7 +103,7 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>daysheetsDs</DataSourceName>
+        <DataSourceName>DataSource1</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>spc_get_ClientList</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
