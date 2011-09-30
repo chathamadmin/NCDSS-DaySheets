@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
+    <DataSource Name="DataSource1">
+      <rd:DataSourceID>82b4c798-a2f8-4b8c-b78f-e159afc5ec55</rd:DataSourceID>
+      <DataSourceReference>DataSource1</DataSourceReference>
+    </DataSource>
   </DataSources>
   <BottomMargin>0.5in</BottomMargin>
   <RightMargin>0.5in</RightMargin>

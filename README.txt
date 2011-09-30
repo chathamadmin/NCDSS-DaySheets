@@ -1,4 +1,4 @@
-Download zip file from github - https://github.com/downloads/chathamadmin/NCDSS-Daysheets/NCDSSDaysheets - v1.0.zip
+Download zip file from github - https://github.com/downloads/chathamadmin/NCDSS-Daysheets/NCDSSDaysheets - v1.0.1.zip
 
 
 DATABASE SETUP
@@ -6,6 +6,8 @@ DATABASE SETUP
 	Create database named DSSDaysheets.
 
 	Run NCDSSDaysheets-CreateDatabase.sql script in 'database script' folder.
+
+	Alter the spc_get_DaysheetUpload stored procedure to use your county's state assigned Id. To do this, replace the 019 value in the following line "  [CTY-DAY-CTY] = '019',  " with your Id.
 	
 	Create SQL Server Reporting Services site to use for reporting.
 
@@ -34,9 +36,13 @@ Edit the web.config file. The following values must be entered:
 	ReportServerURL - the url of the SSRS server
 	ReportListView - url of report server that lists the available reports
 
-Compile the project using Visual Studio.
+	If the database instance is not the default instance located on the same server as the website, the following will also need to be updated within the web.config file:
+		<add name="DSSDaysheetConnectionString" connectionString="Data Source=.;Initial Catalog=NCDSSDaysheet;Integrated Security=SSPI" providerName="System.Data.SqlClient"/>
 
-Set up a website in IIS pointing at compiled site files.
+		for example, if SQL Express is used, the default instance name is SQLEXPRESS. If the instance is running on the same server, then the Data Source will need to change from "." to ".\SQLEXPRESS". For more information about connection strings, see http://www.connectionstrings.com/.
+
+
+Set up a website in IIS pointing at the website files folder.
 
 Browse to site making sure that the user you are currently logged in with has an entry in the tblClient table.
 
