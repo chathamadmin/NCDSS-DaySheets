@@ -1,5 +1,5 @@
-Download zip file from github - https://github.com/downloads/chathamadmin/NCDSS-Daysheets/NCDSSDaysheets-v1.0.1.zip
 
+Download zip file from github - https://github.com/downloads/chathamadmin/NCDSS-Daysheets/NCDSSDaysheets-v1.0.1.zip
 
 DATABASE SETUP
 
